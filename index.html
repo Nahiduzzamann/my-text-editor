@@ -5,9 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Text Editor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-    
+    <main class="container mx-auto bg-sky-400 pb-16">
+        <h1 class="text-2xl text-center font-bold pt-10 pb-2">My Text Editor</h1>
+        <div class="bg-sky-300 border-2 ml-16 mr-16 p-2">
+            <div class="grid grid-cols-3">
+                <div class="">
+                    <button id="bold" onclick="bold()" class="font-bold mr-2">B</button>
+                    <button id="italic" onclick="italic()" class="italic mr-2">I</button>
+                    <button id="underline" onclick="underline()" class="underline">U</button>
+                </div>
+                <div>
+                    <button id="left" onclick="left()" class="mr-2">Left</button>
+                    <button id="center" onclick="center()" class="mr-2">Center</button>
+                    <button id="right" onclick="right()" class="mr-2">Right</button>
+                </div>
+                <div class="flex justify-center">
+                    <input id="size" class="w-10 h-7 rounded mr-2 pl-1" value="10" type="number">
+                    <input type="color" name="" id="color">
+                </div>
+            </div>
+            <div class="h-0.5 bg-gray-500 mt-4 mb-2"></div>
+            <div class="flex justify-center">
+                <textarea class="p-2 rounded" name="" id="textArea" cols="200" rows="10"></textarea>
+            </div>
+        </div>
+    </main>
 
     <script src="editor.js"></script>
 </body>
